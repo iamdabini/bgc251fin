@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ∨×××× [수정 금지] ××××∨ -->
+    <title></title>
+    <!-- ∧×××× [수정 금지] ××××∧ -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+    />
+    <link rel="stylesheet" href="./common/p5template/p5template.css" />
+
+    <script src="./common/p5template/responsive.js"></script>
+    <script src="./common/p5template/scroll.js"></script>
+    <script src="./common/p5template/title.js"></script>
+    <script src="./common/p5template/references.js"></script>
+    <script src="./common/p5template/paging.js"></script>
+    <script>
+      new P5Template.Scroll();
+
+      // ∨○○○○ [수정 필수] ○○○○∨
+      // 작품 제목, 본인 성명, 작품 공개 연도
+      new P5Template.Title(
+        '키스의 고유 조건은 입술끼리 만나야 하고 특별한 기술은 필요치 않다',
+        '손우성',
+        '2025'
+      );
+      // 참고자료 목록
+      const references = [
+        {
+          title: 'What was Coding like 40 years ago?',
+          authors: ['Daniel Shiffman'],
+          year: '2022',
+          publisher: 'The Coding Train - YouTube',
+          url: 'https://www.youtube.com/watch?v=7r83N3c2kPw',
+        },
+        {
+          title: '250425a',
+          authors: ['Okazz'],
+          year: '2025',
+          publisher: 'OpenProcessing',
+          url: 'https://openprocessing.org/sketch/2625827',
+        },
+        {
+          title:
+            'Nature of Code 자연계 법칙을 디지털 세계로 옮기는 컴퓨터 프로그래밍 전략',
+          authors: ['다니엘 쉬프만'],
+          translators: ['윤인성'],
+          year: '2015',
+          publisher: '한빛미디어',
+        },
+      ];
+      // ∧○○○○ [수정 필수] ○○○○∧
+
+      new P5Template.References(references);
+      new P5Template.Paging();
+    </script>
+
+    <!-- ∨○○○○ [수정 필수] ○○○○∨ -->
+    <!-- p5.js 라이브러리 로딩 -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.js"></script>
+    <!-- 본인 스케치 로딩 -->
+    <script src="./sketches/example.js" defer></script>
+    <!-- ∧○○○○ [수정 필수] ○○○○∧ -->
+  </head>
+  <body>
+    <main id="main">
+      <!-- ∨○○○○ [수정 필수] ○○○○∨ -->
+      <!-- 전체화면 여부 선택 -->
+      <section
+        id="section-canvas"
+        class="section section--canvas canvas"
+        data-full-width="false"
+      >
+        <!-- ∧○○○○ [수정 필수] ○○○○∧ -->
+        <div class="container canvas__container">
+          <div id="canvas-container"></div>
+        </div>
+      </section>
+      <section id="section-control" class="section section--control control">
+        <div class="container control__container control__container">
+          <div class="control__label">
+            <div class="control__label__title title"></div>
+            <div class="control__label__author author"></div>
+          </div>
+          <div class="control__paging">
+            <button
+              id="button-prev"
+              class="icon-button control__button control__button--prev"
+              data-icon="arrow_back_ios_new"
+              aria-label="to previous"
+            ></button>
+            <button
+              id="button-next"
+              class="icon-button control__button control__button--next"
+              data-icon="arrow_forward_ios"
+              aria-label="to next"
+            ></button>
+            <button
+              id="button-list"
+              class="icon-button control__button control__button--list"
+              data-icon="grid_view"
+              aria-label="to list"
+            ></button>
+          </div>
+          <div class="control__scroll">
+            <button
+              id="button-scroll"
+              class="icon-button control__button control__button--scroll"
+              data-icon="arrow_drop_down"
+              aria-label="toggle description"
+              data-toward="down"
+            ></button>
+          </div>
+        </div>
+      </section>
+      <section
+        id="section-information"
+        class="section section--information information"
+      >
+        <div class="container information__container">
+          <div class="information__label">
+            <h1 class="information__label__title title"></h1>
+            <h2 class="information__label__author author"></h2>
+          </div>
+          <div class="information__description">
+            <!-- ∨○○○○ [수정 필수] ○○○○∨ -->
+            <!-- 작품 설명 -->
+            <p>
+              우리는 그 이러하다 그리고 이라고 버리다. 수 드넓을 당첨을
+              상관관계를 안 하나도, 기록한 5시 향한다. 염산의 유배지만 곡선의
+              난산을, 다녀가아서 결혼하지 한다. 뿐 보통에 음 연주자를 씨 색깔만
+              병이다 알면서, 한 하여금 움직이다. 나의 동안으로서 잃음 여보세요
+              처방은 동안 크다. 살펴보고자 우편도, 불감증을 351미터 한 잃다.
+            </p>
+            <!-- ∧○○○○ [수정 필수] ○○○○∧ -->
+          </div>
+          <div class="information__reference">
+            <div class="information__reference__wrap">
+              <div class="information__reference__title">참고자료</div>
+              <ol></ol>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
